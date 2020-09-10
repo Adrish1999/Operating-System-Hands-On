@@ -1,0 +1,7 @@
+Hands On Practice:
+
+
+
+1.   Create five empty files empty1, empty2, empty3, empty4 and empty5.
+
+Answer :-	touch empty1 empty2 empty3 empty4 empty5
