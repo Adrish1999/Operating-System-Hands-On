@@ -21,3 +21,19 @@ Answer :-	cat > text
 3.   Display the contents of the file text on the screen.
 
 Answer :-	cat text
+
+
+
+
+
+4.   Make a copy of the file text into another file newtext.
+
+Answer :-	cp text newtext
+
+
+
+
+
+5.   Create a file matter and type any 2 sentences in t.
+
+Answer :-	cat > matter
