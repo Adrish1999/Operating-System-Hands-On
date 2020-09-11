@@ -133,3 +133,59 @@ Answer :-	ls -a
 17.  Count the number of users currently logged into the system
 
 Answer :-	who | wc -l
+
+
+
+
+
+18.  When will rmdir xyz (assume xyz is directory) fail to work?
+
+Answer :-	Whenever xyz directory is non-empty
+
+
+
+
+
+19.  What does cd do when used without arguments?
+
+Answer :-	Go to home
+
+
+
+
+
+20.  Create a text file in the following format:
+
+       Roll   | Name       | Department  | HOD
+
+   Fill up with atleast 10 records
+
+   Find the following:
+   a) Display only 1st and 3rd Colums
+   b) Display sorted by name
+
+Answer :-	a)  cut -d "|" -f 1,3 students.txt
+
+		b)  sort -k 2 students.txt
+
+
+
+
+
+21. Create a text file and find whether the phrase “I am a boy” exists or not. Use all options of the grep command/
+
+Answer :-	cat myfile.txt
+		grep -c "I am a boy" myfile.txt	  #This prints only a count of the lines that match the pattern "I am a boy"
+		grep -h "I am a boy" myfile.txt	  #Display the matched lines, but do not display the filenames.
+		grep -i "I am a boy" myfile.txt	  #Ignores, case for matching
+		grep -l "I am a boy" myfile.txt	  #Displays list of a filenames only
+		grep -n "I am a boy" myfile.txt	  #Display the matched lines and their line numbers
+		grep -v "I am a boy" myfile.txt	  #This prints out all the lines that do not matches the pattern
+
+
+
+
+
+22. Sort 5 numbers stored in a file.
+
+Answer :-	sort -n filename.txt
