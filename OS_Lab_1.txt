@@ -13,3 +13,11 @@ Answer :-	touch empty1 empty2 empty3 empty4 empty5
 2.   Create a file called text and store your name, age and address in it.
 
 Answer :-	cat > text
+
+
+
+
+
+3.   Display the contents of the file text on the screen.
+
+Answer :-	cat text
