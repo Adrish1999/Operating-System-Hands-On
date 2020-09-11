@@ -45,3 +45,27 @@ Answer :-	cat > matter
 6.   Combine the contents of the file text and matter into another file txtmat.
 
 Answer :-	cat text matter > txtmat
+
+
+
+
+
+7.   Delete the file text.
+
+Answer :-	rm text
+
+
+
+
+
+8.   Change the permission of the file newtext to 666.
+
+Answer :-	chmod 666 newtxt
+
+
+
+
+
+9.   Rename the file newtext to oldtext.
+
+Answer :-	mv newtext oldtext
