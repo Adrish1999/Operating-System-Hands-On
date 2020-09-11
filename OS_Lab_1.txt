@@ -69,3 +69,27 @@ Answer :-	chmod 666 newtxt
 9.   Rename the file newtext to oldtext.
 
 Answer :-	mv newtext oldtext
+
+
+
+
+
+10.  Create a directory mydir in the current directory
+
+Answer :-	mkdir mydir
+
+
+
+
+
+11.  Move the files oldtext and matter to the directory mydir.
+
+Answer :-	mv oldtext matter mydir
+
+
+
+
+
+12.  Create another directory newdir in the mydir directory.
+
+Answer :-	mkdir mydir/newdir
