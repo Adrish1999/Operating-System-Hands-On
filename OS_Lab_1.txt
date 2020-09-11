@@ -93,3 +93,43 @@ Answer :-	mv oldtext matter mydir
 12.  Create another directory newdir in the mydir directory.
 
 Answer :-	mkdir mydir/newdir
+
+
+
+
+
+13.  Copy the contents of mydir directory to the newdir directory.
+
+Answer :-	mv mydir/* mydir/newdir 
+
+
+
+
+
+14.  Display the current date in the format dd/mm/yyyy.
+
+Answer :-	date +%d/%m/%y
+
+
+
+
+
+15.  Check the current users.
+
+Answer :-	who
+
+
+
+
+
+16.  Obtain a complete listing of all files and directories in the whole system.
+
+Answer :-	ls -a
+
+
+
+
+
+17.  Count the number of users currently logged into the system
+
+Answer :-	who | wc -l
