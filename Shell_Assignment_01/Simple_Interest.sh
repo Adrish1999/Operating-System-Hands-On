@@ -1,7 +1,8 @@
 echo -n "Enter the principal amount: "
 read p
 echo -n "Enter the rate of interest: "
-read i
+read r
 echo -n "Enter the number of years: "
 read t
-echo "Interest = $((p\*r\*t / 100))"
+interest = $(echo "($p * $r * $t)/100"|bc)
+echo "Simple interest: " $interest
