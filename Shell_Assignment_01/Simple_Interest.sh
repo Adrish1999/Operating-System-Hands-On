@@ -1,4 +1,3 @@
-#!/bin/bash
 echo -n "Enter the principal amount: "
 read p
 echo -n "Enter the rate of interest: "
