@@ -1,15 +1,14 @@
-file=$(echo $1)
-if [ -e $file ];
+if [ -e $1 ];
 then
 	echo "File exists"
 else
-	touch $file
+	touch $1
 fi
-if [ -r $file ];
+if [ -r $1 ];
 then
 	echo "File is readable"
 else
 	echo "File is not readable"
 fi
-ls -l $file
+ls -l $1
 
