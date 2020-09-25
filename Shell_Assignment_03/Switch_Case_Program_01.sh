@@ -1,3 +1,4 @@
+echo "***** Menu Driven Program *****"
 echo "Enter 1 to merge contents of file 1 and file 2"
 echo "Enter 2 to search for a given word in a file"
 read choice
