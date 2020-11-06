@@ -24,7 +24,13 @@ echo "Minimum number : $min"
 
 
 
+<<<<<<< HEAD
 : '
+=======
+'''
+Output
+
+>>>>>>> c98502e6a19178a5f2c61c9e12de31e57131b93e
 $ sh Max_Min.sh
 Enter number of integers
 5
@@ -36,4 +42,8 @@ Enter the numbers
 -10
 Maximum number : 34
 Minimum number : -10
+<<<<<<< HEAD
 '
+=======
+'''
+>>>>>>> c98502e6a19178a5f2c61c9e12de31e57131b93e
