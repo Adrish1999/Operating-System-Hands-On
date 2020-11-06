@@ -29,6 +29,5 @@ else
 		fi
 		a=$b
 		b=$c
-		
 	done
 fi
