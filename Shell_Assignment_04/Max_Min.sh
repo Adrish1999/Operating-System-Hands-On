@@ -22,3 +22,18 @@ done
 echo "Maximum number : $max"
 echo "Minimum number : $min"
 
+
+
+: '
+$ sh Max_Min.sh
+Enter number of integers
+5
+Enter the numbers
+34
+6
+-8
+12
+-10
+Maximum number : 34
+Minimum number : -10
+'
