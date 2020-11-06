@@ -15,20 +15,25 @@ else
 	
 	while true
 	do
-		c=`expr $a + $b`
 		i=`expr $a + 1`
-		if [ $b -le $n ]
-		then
-			while [ $i -lt $b ]
-			do
-				echo "$i"
-				i=`expr $i + 1`
-			done
-		else
-			break
-		fi
+		while [ $i -lt $b ]
+		do
+			echo "$i"
+			i=`expr $i + 1`
+		done
+		c=`expr $a + $b`
 		a=$b
 		b=$c
+		if [ $b -gt $n ]
+		then
+			j=`expr $a + 1`
+			while [ $j -le $n ]
+			do
+				echo "$j"
+				j=`expr $j + 1`
+			done
+			break
+		fi
 	done
 fi
 
