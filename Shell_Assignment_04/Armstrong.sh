@@ -17,3 +17,19 @@ then
 else
 	echo "$copy is not an Armstrong number"
 fi
+
+
+
+
+
+
+
+: '
+Output
+
+
+$ sh Armstrong.sh
+Enter the number
+153
+153 is an Armstrong number
+'

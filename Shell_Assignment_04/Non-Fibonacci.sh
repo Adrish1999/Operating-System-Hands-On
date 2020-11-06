@@ -31,3 +31,33 @@ else
 		b=$c
 	done
 fi
+
+
+
+
+
+
+
+: '
+Output
+
+
+$ sh Non-Fibonacci.sh
+Enter the limit n
+21
+The non-fibonacci terms upto 21 are :
+4
+6
+7
+9
+10
+11
+12
+14
+15
+16
+17
+18
+19
+20
+'
