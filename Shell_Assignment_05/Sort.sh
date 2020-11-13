@@ -1,17 +1,29 @@
 echo "Enter the value of n :"
 read n
 echo "Enter $n numbers :"
-i=1
-> numbers.txt
-while [ $i -le $n ]
+i=0
+   
+while [ $i -lt $n ] 
 do
-	read a
-	echo $a >> numbers.txt
-	i=`expr $i + 1`
+    read arr[$i] 
+    i=`expr $i + 1` 
 done
 echo "The numbers sorted in descending order are :"
-sort -nr numbers.txt
-
+for ((i = 0; i<$n; i++))  
+do
+      
+    for((j = 0; j<$n-i-1; j++)) 
+    do
+      
+        if [ ${arr[j]} -lt ${arr[$((j+1))]} ] 
+        then
+            temp=${arr[j]} 
+            arr[$j]=${arr[$((j+1))]}   
+            arr[$((j+1))]=$temp 
+        fi
+    done
+done
+echo ${arr[*]} 
 
 
 
@@ -21,28 +33,15 @@ Output
 
 $ sh Sort.sh
 Enter the value of n :
-10
-Enter 10 numbers :
-6
-32
-15
-80
-23
-55
-11
-76
-43
-20
+5
+Enter 5 numbers :
+19
+30
+3
+45
+2
 The numbers sorted in descending order are :
-80
-76
-55
-43
-32
-23
-20
-15
-11
-6
+45 30 19 3 2
+
 
 '
