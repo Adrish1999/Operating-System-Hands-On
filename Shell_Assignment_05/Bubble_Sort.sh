@@ -8,10 +8,10 @@ do
     read arr[$i] 
     i=`expr $i + 1` 
 done
+
 echo "The numbers sorted in descending order are :"
 for ((i = 0; i<$n; i++))  
-do
-      
+do  
     for((j = 0; j<$n-i-1; j++)) 
     do
       
