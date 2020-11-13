@@ -22,3 +22,18 @@ then
 else
 	echo "$ch was not found in the string $str"
 fi
+
+
+
+
+: '
+Output
+
+
+$ sh Character_Occurence.sh
+Enter a string :
+Assassin
+Enter the character to be searched :
+s
+s was found in the string Assassin 4 times
+'

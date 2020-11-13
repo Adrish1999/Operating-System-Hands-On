@@ -11,7 +11,7 @@ do
 	l=`echo $str | cut -c $len`
 	if [ $k != $l ]
 	then
-		echo "String is not palindrome"
+		echo "$str is not a palindrome string"
 		flag=0
 		break
 	fi
@@ -20,5 +20,18 @@ do
 done
 if [ $flag -eq 1 ]
 then
-	echo "String is palindrome"
+	echo "$str is a palindrome string"
 fi
+
+
+
+
+: '
+Output
+
+
+$ sh Palindrome_String.sh
+Enter a string :
+madam
+madam is a palindrome string
+'
