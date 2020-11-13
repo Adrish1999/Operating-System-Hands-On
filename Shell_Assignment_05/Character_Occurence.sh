@@ -5,21 +5,20 @@ read ch
 len=`echo $str | wc -c`
 len=`expr $len - 1`
 i=1
-flag=0
+count=0
 pos=0
 while [ $i -le $len ]
 do
 	character=`echo $str | cut -c $i`
 	if [ "$character" = "$ch" ]
 	then
-		flag=1
-		pos=$i
+		count=`expr $count + 1`
 	fi
 	i=`expr $i + 1`
 done
-if [ $flag -eq 1 ]
+if [ $count -gt 0 ]
 then
-	echo "$ch was found in the string $str at position $pos"
+	echo "$ch was found in the string $str $count times"
 else
 	echo "$ch was not found in the string $str"
 fi
