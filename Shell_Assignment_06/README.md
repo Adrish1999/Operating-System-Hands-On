@@ -4,15 +4,15 @@ Assignment 26-11-2020
 
 2. Create a file that contains the ROLL NUMBER, NAME, CITY of students of a class in sorted order with  respect to Roll Number. Now write a menu driven shell script that has the following options:
 
-a. Display the contents of whole file.
+    a. Display the contents of whole file.
 
-b. Display the information of a student with specific Roll Number supplied by the User.
+    b. Display the information of a student with specific Roll Number supplied by the User.
 
-c. Delete the entry of a student from the file with a specific Roll Number supplied by User.
+    c. Delete the entry of a student from the file with a specific Roll Number supplied by User.
 
-d. Add a new entry in the file.
+    d. Add a new entry in the file.
 
-e. Update an entry of a student with a specific Roll Number supplied by the User.
+    e. Update an entry of a student with a specific Roll Number supplied by the User.
 
 
 3. Write a shell script to create two infinite processes in background and then prematurely terminate each of these infinite processes.
