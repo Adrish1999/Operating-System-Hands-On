@@ -1,17 +1,15 @@
-clear
 i="y"
-echo "Enter name of database "
-read db
-if [[ ! -e $db ]]
+echo "Enter name of the file "
+read file
+if [[ ! -e $file ]]
 then
-    touch $db
-    echo "Roll  |  Name  |  City">>$db
+    touch $file
+    echo "ROLL NUMBER  |  NAME  |  CITY">>$file
     
 fi
 
 while [ $i = "y" ]
 do
-clear
 echo "1.View the Data Base "
 echo "2.View Specific Records "
 echo "3.Add Records "
@@ -21,39 +19,38 @@ echo "6.Exit "
 echo "Enter your choice "
 read ch
     case $ch in
-        1)
-		  cat $db;;
-        2)echo "Enter Roll "
+        1)sort -k 1 $file;;
+        2)echo "Enter Roll Number"
           read id
-            grep -i "$id" $db;;
-        3)echo "Enter Roll: "
+            grep -i "$id" $file;;
+        3)echo "Enter Roll Number: "
           read id
-          echo "Enter new std name: "
+          echo "Enter new Student name: "
           read name
           echo "Enter City: "
           read city
-          echo "$id  |  $name  |  $city">>$db;;
-        4)echo "Enter Roll"
+          echo "$id  |  $name  |  $city">>$file;;
+        4)echo "Enter Roll Number"
           read id
-          dbs1=$(grep -v $id $db)
-          echo $dbs1 > $db
+          dbs1=$(grep -v $id $file)
+          echo $dbs1 > $file
           echo "Record is deleted"
-          cat db;;
-        5)echo "Enter Roll"
+          cat $file;;
+        5)echo "Enter Roll No of the student to update"
           read id
-          dbs1=$(grep -v $id $db)
-          echo $dbs1 > $db
-          echo "Enter new std name: "
+          dbs1=$(grep -v $id $file)
+          echo $dbs1 > $file
+          echo "Enter new Student name: "
           read name
           echo "Enter City: "
           read city
-          echo "$id  |  $name  |  $city">>$db;;
+          echo "$id  |  $name  |  $city">>$file;;
         6)exit;;
         *)echo "Invalid choice ";;
     esac
-echo "Do u want to continue ?"
+echo "Press y to continue, press any other key to exit!"
 read i
-if [ $i != "y" ]
+if [ $i != "y" ];
 then
     exit
 fi
