@@ -1,5 +1,5 @@
 ROLL NUMBER |  NAME  |  CITY
-09  |  Adrish Bose  |  Kolkata
-01  |  Virat Kohli  |  Delhi
-04  |  Rohit Sharma  |  Mumbai
+09  |  Adrish  |  Kolkata
+01  |  Virat   |  Delhi
+04  |  Rohit   |  Mumbai
 02  |  Rahul  |  Bangalore
