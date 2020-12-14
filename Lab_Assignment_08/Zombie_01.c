@@ -10,7 +10,7 @@ int main()
         {
                 printf("\nChild Process\n");
         }
-        else if( p > 0 )
+        else if( pid > 0 )
         {
                 sleep(5);
                 printf("\nParent Process\n");
