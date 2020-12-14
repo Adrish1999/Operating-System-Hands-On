@@ -17,7 +17,7 @@ int main()
                 printf("ID: %d\n",getpid());
                 printf("Parent -ID: %d\n\n",getppid());
 
-                sleep(10);
+                sleep(5);
 
 
                 printf("\nOrphan process \n");
