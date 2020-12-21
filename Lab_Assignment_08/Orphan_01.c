@@ -4,30 +4,15 @@
 
 int main()
 {
-        int pid = fork();
-        if (pid > 0)
-        {
-                printf("\nParent process\n");
-                printf("ID : %d\n\n",getpid());
-        }
-        else if (pid == 0)
+        int p;
+        p = fork();
+        if(p == 0)
         {
                 printf("\nChild process\n");
-
-                printf("ID: %d\n",getpid());
-                printf("Parent -ID: %d\n\n",getppid());
-
-                sleep(10);
-
-
-                printf("\nOrphan process \n");
-                printf("ID: %d\n",getpid());
-                printf("Parent -ID: %d\n",getppid());
+                sleep(5);
+                printf("Orphan process\n");
         }
-        else
-        {
-                printf("Failed to create child process");
-        }
-
-        return 0;
+        else if(p > 0)
+        printf("\nParent proces\n");
+        return 1;
 }
