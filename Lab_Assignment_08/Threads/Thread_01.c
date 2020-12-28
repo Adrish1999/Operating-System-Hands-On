@@ -33,3 +33,16 @@ int main()
     }
     return 0;
 }
+
+
+/*
+Output :
+
+Thread created successfully.
+I am main thread.
+I am new thread.
+1
+I am main thread.
+I am new thread.
+2
+*/
