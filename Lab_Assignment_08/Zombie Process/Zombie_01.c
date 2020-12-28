@@ -21,3 +21,19 @@ int main()
                 return 1;
         }
 }
+
+
+
+/*
+Output:
+
+Child Process
+
+Parent Process
+Zombie Process
+
+1416564 pts/0    00:02:16 p1.out
+1416565 pts/0    00:00:00 p1.out <defunct>
+
+
+*/

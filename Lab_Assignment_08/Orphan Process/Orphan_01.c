@@ -16,3 +16,14 @@ int main()
         printf("\nParent proces\n");
         return 1;
 }
+
+
+
+/*
+Output:
+
+Parent proces
+Child process
+Orphan process
+
+*/

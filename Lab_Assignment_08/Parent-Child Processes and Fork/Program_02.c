@@ -12,13 +12,21 @@ int main()
 	}
 	else if(p == 0)
 	{
-		printf("\nChild process %d\n",++i);
+		printf("\nChild process, %d\n",id++);
 	}
 	else
 	{
-		printf("\nParent process %d\n",i);
+		printf("\nParent process, %d\n",id);
 	}
 	return 0;
 }
 
 
+
+/*
+Output:
+
+Parent process, 5
+Child process, 5
+
+*/

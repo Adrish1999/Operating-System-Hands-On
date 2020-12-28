@@ -44,3 +44,14 @@ void *thread_function(void *arg)
   pthread_exit("Thank you for the CPU time");
 }
 
+
+
+/*
+Output:
+
+Waiting for thread to finish...
+Thread_function is running. Argument was: Hello World
+Thread joined, it returned: Thank you for the CPU time
+Message is now: Bye!
+
+*/

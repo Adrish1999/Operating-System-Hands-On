@@ -6,6 +6,21 @@ int main()
 	fork();
 	fork();
 	fork();
-	printf("\nHello\n");
+	printf("Hello\n");
 	return 0;
 }
+
+
+/*
+Output:
+
+Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+
+*/
