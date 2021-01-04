@@ -1,0 +1,49 @@
+Questions and Answers:
+
+1. What do you understand by a child process? 
+
+Answer: A child process is a process created by a parent process in operating system using a fork() system call. A child process may also be called a subprocess or a subtask.
+
+A child process is created as its parent process’s copy and inherits most of its attributes. If a child process has no parent process, it was created directly by the kernel.
+
+
+
+
+2. Discuss the fork() function. Discuss the significance of pid and ppid of a process.
+
+Answer: The fork() function is:-
+
+i. fork() is a system call used to create the child process
+ii. fork() returns negative value if the child process creation is unsuccessful
+iii. fork() returns value 0 to the newly created child process
+iv. fork() returns positive value( process ID of child process) to the parent process
+
+pid: The is the process ID (PID) of the process you call the Process.pid method in.
+ppid: The process ID (PID) of the parent process (the process that spawned the current one).
+
+
+
+
+3.  When a process is called zombie? How do you demonstrate the existence of zombie process?
+
+Answer: A zombie process is a process whose execution is completed but it still has an entry in the process table.
+
+Zombie processes usually occur for child processes, as the parent process still needs to read its child’s exit status.
+
+If the parent decides not to wait for the child’s termination and it executes its subsequent task, then at the termination of the child, the exit status is not read.
+Hence, there remains an entry in the process table even after the termination of the child. This state of the child process is known as the Zombie state.
+If we execute the command "ps -A", we can find the trace of the zombie process, identified as "defunct".
+
+
+
+
+4. When a process is called orphan? Discuss its difference with a zombie process. How do you demonstrate the existence of orphan process?
+
+Answer: A process whose parent process no more exists i.e. either finished or terminated without waiting for its child process to terminate is called an orphan process.
+
+An orphan process is a process whose parent process has finished or terminated, though it (child process) remains running itself.
+A zombie process or defunct process is a process that has completed execution but still has an entry in the process table as its parent process didn't invoke an wait() system call.
+
+
+Existence of orphan process: Assume a child process gets created successfully using fork(), then we make the child process sleep for sometime and in meantime, the parent process
+finishes execution. In that case, when the child process wakes up, it becomes an orphan process. The PPID of the orphan process is 1.
