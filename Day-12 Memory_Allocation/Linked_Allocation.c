@@ -153,14 +153,14 @@ void First_Fit(int n, int *requests) //Method to implement First-fit
 }
 
 
-int Min_Hole() //Method to find out the hole with minimum size required for Best-fit
+int Min_Hole(int request) //Method to find out the hole with minimum size required for Best-fit
 {
 	N *ptr = start;
 	int min = 10000, pos = 0, p = 0;
 	while(ptr->link != NULL)
 	{
 		p++;
-		if(ptr->size < min && (strcmp(ptr->info,"Hole") == 0))
+		if((request <= ptr->size) && (ptr->size < min) && (strcmp(ptr->info,"Hole") == 0))
 		{
 			min = ptr->size;
 			pos = p;
@@ -180,12 +180,12 @@ void Best_Fit(int n, int *requests) //Method to implement Best-fit
 	{
 		c = 0;
 		ptr = start;
-		pos = Min_Hole();
+		pos = Min_Hole(requests[i]);
 		printf("\nThe node number of the hole with minimum size is %d\n",pos);
 		while(ptr->link != NULL)
 		{
 			c++;
-			if((c == pos) && requests[i] <= ptr->size && (strcmp(ptr->info,"Hole") == 0))
+			if((c == pos) && (strcmp(ptr->info,"Hole") == 0))
 			{
 				printf("\n\nProcess %d allocated to partition %s with starting address %d\n\n",i,ptr->info,ptr->start_address);
 				ptr->size -= requests[i];
@@ -204,14 +204,14 @@ void Best_Fit(int n, int *requests) //Method to implement Best-fit
 }
 
 
-int Max_Hole() //Method to find out the hole with maximum size required for Worst-fit
+int Max_Hole(int request) //Method to find out the hole with maximum size required for Worst-fit
 {
 	N *ptr = start;
 	int max = 0, pos = 0, p = 0;
 	while(ptr->link != NULL)
 	{
 		p++;
-		if(ptr->size > max && (strcmp(ptr->info,"Hole") == 0))
+		if((request <= ptr->size) && (ptr->size > max) && (strcmp(ptr->info,"Hole") == 0))
 		{
 			max = ptr->size;
 			pos = p;
@@ -232,12 +232,12 @@ void Worst_Fit(int n, int *requests) //Method to implement Worst-fit
 	{
 		c = 0;
 		ptr = start;
-		pos = Max_Hole();
+		pos = Max_Hole(requests[i]);
 		printf("\nThe node number of the hole with maximum size is %d\n",pos);
 		while(ptr->link != NULL)
 		{
 			c++;
-			if((c == pos) && requests[i] <= ptr->size && (strcmp(ptr->info,"Hole") == 0))
+			if((c == pos) && (strcmp(ptr->info,"Hole") == 0))
 			{
 				printf("\n\nProcess %d allocated to partition %s with starting address %d\n\n",i,ptr->info,ptr->start_address);
 				ptr->size -= requests[i];
