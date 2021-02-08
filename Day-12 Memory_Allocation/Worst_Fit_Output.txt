@@ -1,0 +1,65 @@
+Present condition of the memory is:
+
+(A, 0, 50 KB) -->(Hole, 50, 75 KB) -->(B, 125, 100 KB) -->(Hole, 225, 175 KB) -->(C, 400, 300 KB)
+
+Enter the number of processes in the queue:
+4
+
+Enter the requests of the processes:
+25
+50
+100
+75
+
+The processes in the queue and their requests are:
+Process no: 1	 Request: 25 KB
+Process no: 2	 Request: 50 KB
+Process no: 3	 Request: 100 KB
+Process no: 4	 Request: 75 KB
+
+
+Enter 1 to apply First Fit
+Enter 2 to apply Best Fit
+Enter 3 to apply Worst Fit
+Enter your choice:
+3
+
+Initial condition of the memory is:
+
+(A, 0, 50 KB) -->(Hole, 50, 75 KB) -->(B, 125, 100 KB) -->(Hole, 225, 175 KB) -->(C, 400, 300 KB)
+
+The node number of the hole with maximum size is 4
+
+
+Process 1 allocated to partition Hole with starting address 225
+
+(A, 0, 50 KB) -->(Hole, 50, 75 KB) -->(B, 125, 100 KB) -->(Hole, 225, 150 KB) -->(P1, 375, 25 KB) -->(C, 400, 300 KB)
+
+
+The node number of the hole with maximum size is 4
+
+
+Process 2 allocated to partition Hole with starting address 225
+
+(A, 0, 50 KB) -->(Hole, 50, 75 KB) -->(B, 125, 100 KB) -->(Hole, 225, 100 KB) -->(P2, 325, 50 KB) -->(P1, 375, 25 KB) -->(C, 400, 300 KB)
+
+
+The node number of the hole with maximum size is 4
+
+
+Process 3 allocated to partition Hole with starting address 225
+
+(A, 0, 50 KB) -->(Hole, 50, 75 KB) -->(B, 125, 100 KB) -->(P3, 225, 100 KB) -->(P2, 325, 50 KB) -->(P1, 375, 25 KB) -->(C, 400, 300 KB)
+
+
+The node number of the hole with maximum size is 2
+
+
+Process 4 allocated to partition Hole with starting address 50
+
+(A, 0, 50 KB) -->(P4, 50, 75 KB) -->(B, 125, 100 KB) -->(P3, 225, 100 KB) -->(P2, 325, 50 KB) -->(P1, 375, 25 KB) -->(C, 400, 300 KB)
+
+
+After applying Worst Fit the final condition of the memory is:
+
+(A, 0, 50 KB) -->(P4, 50, 75 KB) -->(B, 125, 100 KB) -->(P3, 225, 100 KB) -->(P2, 325, 50 KB) -->(P1, 375, 25 KB) -->(C, 400, 300 KB)
