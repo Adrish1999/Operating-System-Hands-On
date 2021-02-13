@@ -240,7 +240,7 @@ void display_curses() //Method to create the Curses window and display informati
     wCenterTitle(small_win, ptr->info);
     sprintf(temp,"%d",ptr->size);
     mvwaddstr(small_win, 4,3,temp);
-    mvwaddstr(small_win, 4,5,"KB");
+    mvwaddstr(small_win, 4,7,"KB");
     mvprintw(28,cols,"%d",ptr->start_address);
     
     touchwin(small_win);
